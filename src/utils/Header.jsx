@@ -2,6 +2,7 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [value, setValue] = React.useState('one');
@@ -58,15 +59,15 @@ export default function Header() {
         }}
       >
         <div style={styles.logo}>
-          <a href='' style={styles.enlace}>Departamento de <br />Informática y Sistemas</a>
+          <a href='/' style={styles.enlace}>Departamento de <br />Informática y Sistemas</a>
         </div>
         <div>
-          <Tab value="one" label="Carrera" sx={{ color: 'white' }} />
-          <Tab value="two" label="Estudiantes Nuevos" sx={{ color: 'white' }} />
-          <Tab value="three" label="Estudiantes Regulares" sx={{ color: 'white' }} />
-          <Tab value="four" label="Docentes" sx={{ color: 'white' }} />
-          <Tab value="five" label="Graduados" sx={{ color: 'white' }} />
-          <Tab value="six" label="Extensión-Investigación" sx={{ color: 'white' }} />
+          <Tab component={Link} to="/carrera" value="one" label="Carrera" sx={{ color: 'white' }} />
+          <Tab component={Link} to="/carrera" value="two" label="Estudiantes Nuevos" sx={{ color: 'white' }} />
+          <Tab component={Link} to="/estudiantes-regulares" value="three" label="Estudiantes Regulares" sx={{ color: 'white' }} />
+          <Tab component={Link} to="/carrera" value="four" label="Docentes" sx={{ color: 'white' }} />
+          <Tab component={Link} to="/carrera" value="five" label="Graduados" sx={{ color: 'white' }} />
+          <Tab component={Link} to="/carrera" value="six" label="Extensión-Investigación" sx={{ color: 'white' }} />
         </div>
       </Tabs>
     </Box>
