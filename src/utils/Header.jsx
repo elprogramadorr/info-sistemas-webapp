@@ -54,7 +54,7 @@ export default function Header() {
             justifyContent: 'space-between',
             alignItems: 'center',
             backgroundColor: '#FF000040',
-    
+
           }
         }}
       >
@@ -62,12 +62,73 @@ export default function Header() {
           <a href='/' style={styles.enlace}>Departamento de <br />Informática y Sistemas</a>
         </div>
         <div>
-          <Tab component={Link} to="/carrera" value="one" label="Carrera" sx={{ color: 'white' }} />
-          <Tab component={Link} to="/carrera" value="two" label="Estudiantes Nuevos" sx={{ color: 'white' }} />
-          <Tab component={Link} to="/estudiantes-regulares" value="three" label="Estudiantes Regulares" sx={{ color: 'white' }} />
-          <Tab component={Link} to="/carrera" value="four" label="Docentes" sx={{ color: 'white' }} />
-          <Tab component={Link} to="/carrera" value="five" label="Graduados" sx={{ color: 'white' }} />
-          <Tab component={Link} to="/carrera" value="six" label="Extensión-Investigación" sx={{ color: 'white' }} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="one" label="Carrera"
+            sx={{
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#f0f0f0',
+                color: '#3f51b5',
+              }
+            }}
+          />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="two" label="Estudiantes Nuevos"
+            sx={{
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#f0f0f0',
+                color: '#3f51b5',
+              }
+            }} />
+          <Tab
+            component={Link}
+            to="/estudiantes-regulares"
+            value="three" label="Estudiantes Regulares"
+            sx={{
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#f0f0f0',
+                color: '#3f51b5',
+              }
+            }} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="four" label="Docentes"
+            sx={{
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#f0f0f0',
+                color: '#3f51b5',
+              }
+            }} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="five" label="Graduados"
+            sx={{
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#f0f0f0',
+                color: '#3f51b5',
+              }
+            }} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="six" label="Extensión-Investigación"
+            sx={{
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#f0f0f0',
+                color: '#3f51b5',
+              }
+            }} />
         </div>
       </Tabs>
     </Box>
