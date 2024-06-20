@@ -5,7 +5,11 @@ function DropdownMenu({ label, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    if(localStorage.getItem('isPressedEstRegular') === 'false') {
+        setIsOpen(!isOpen);
+        localStorage.setItem('primerNivelEstRegular', label);
+    }
+    
   };
 
   const styles = {
