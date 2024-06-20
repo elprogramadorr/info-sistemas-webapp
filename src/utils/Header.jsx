@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
+import {AppBar, Toolbar, Tabs, Tab, Box, Typography, useMediaQuery, Grid} from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [value, setValue] = React.useState('one');
+  const isMobile = useMediaQuery('(max-width:1160px)');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -17,25 +17,34 @@ export default function Header() {
     },
     tabs: {
       display: 'flex',
-      justifyContent: 'space-between',
+      justifyContent: isMobile? 'center':'space-between',
       alignItems: 'center',
-      backgroundColor: '#1a237e',
+      flexDirection: isMobile? 'column':'row',
     },
     logo: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      fontSize: '1.35em',
+      fontSize: isMobile? '1em':'1.35em',
       fontWeight: 400,
       color: 'white',
       width: 'auto',
       padding: '10px 5px',
       whiteSpace: 'nowrap',
       textOverflow: 'ellipsis',
+      margin: '0 15px',
     },
     enlace: {
       textDecoration: 'none',
       color: 'inherit'
+    },
+    tab: {
+      color: 'white',
+      fontSize: isMobile ? '0.75em' : '0.95em',
+      '&:hover': {
+        backgroundColor: '#f0f0f0',
+        color: '#3f51b5',
+      }
     }
   };
 
@@ -50,23 +59,49 @@ export default function Header() {
         sx={{
           '& .MuiTabs-flexContainer': {
             display: 'flex',
-            justifyContent: 'space-between',
+            flexDirection: isMobile? 'column':'row',
+            justifyContent: isMobile? 'center':'space-between',
             alignItems: 'center',
             backgroundColor: '#FF000040',
-    
+
           }
         }}
       >
         <div style={styles.logo}>
-          <a href='' style={styles.enlace}>Departamento de <br />Informática y Sistemas</a>
+          <a href='/' style={styles.enlace}>Departamento de <br />Informática y Sistemas</a>
         </div>
-        <div>
-          <Tab value="one" label="Carrera" sx={{ color: 'white' }} />
-          <Tab value="two" label="Estudiantes Nuevos" sx={{ color: 'white' }} />
-          <Tab value="three" label="Estudiantes Regulares" sx={{ color: 'white' }} />
-          <Tab value="four" label="Docentes" sx={{ color: 'white' }} />
-          <Tab value="five" label="Graduados" sx={{ color: 'white' }} />
-          <Tab value="six" label="Extensión-Investigación" sx={{ color: 'white' }} />
+        <div style={styles.tabs}>
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="one" label="Carrera"
+            sx={styles.tab}
+          />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="two" label="Estudiantes Nuevos"
+            sx={styles.tab} />
+          <Tab
+            component={Link}
+            to="/estudiantes-regulares"
+            value="three" label="Estudiantes Regulares"
+            sx={styles.tab} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="four" label="Docentes"
+            sx={styles.tab} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="five" label="Graduados"
+            sx={styles.tab} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="six" label="Ext-Invest"
+            sx={styles.tab} />
         </div>
       </Tabs>
     </Box>
