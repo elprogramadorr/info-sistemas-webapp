@@ -9,6 +9,7 @@ import Construccion from "./Construccion.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import EmailIcon from '@mui/icons-material/Email';
+import Auxiliaturas from "./Auxiliaturas.jsx";
 
 function DropdownItem({ text, isSelected, onClick }) {
   const styles = {
@@ -74,6 +75,7 @@ const EstudiantesRegulares = () => {
       flex: '1',
       display: 'flex',
       flexDirection: 'column',
+      fontFamily: 'Nunito Sans',
     }
   }; 
   const scrollToTop = () => {
@@ -96,10 +98,10 @@ const EstudiantesRegulares = () => {
     } else if (selectedItem === "Proceso") {
       return  <ProcesoScreen />
     } else if (selectedItem === "Auxiliaturas") {
-      return <div> Aux </div>
+      return <Auxiliaturas />
     } else if (selectedItem === "Cambio de carrera") {
       return <div> Cambio </div>
-    } else if (selectedItem === "Titulacion") {
+    } else if (selectedItem === "Titulación") {
       return <div> Titu </div>
     } else if (selectedItem === "Buscador de proyectos") {
       return <div> Buscador </div>
@@ -143,7 +145,7 @@ const EstudiantesRegulares = () => {
           </div>
         </div>
         <div style={sty.content}>
-          <MigaDePan></MigaDePan>
+          <MigaDePan/>
           <div>
             {renderContent()}
           </div>

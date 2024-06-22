@@ -44,7 +44,8 @@ export default function Header() {
       '&:hover': {
         backgroundColor: '#f0f0f0',
         color: '#3f51b5',
-      }
+      },
+      fontFamily: "Nunito Sans",
     }
   };
 

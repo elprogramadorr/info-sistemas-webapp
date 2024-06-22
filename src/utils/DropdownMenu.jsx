@@ -29,6 +29,7 @@ function DropdownMenu({ label, children, defaultOpen}) {
       border: '1px solid white',
       display: 'flex',
       justifyContent: 'space-between',
+      fontFamily: "Nunito Sans",
     },
     dropdownContent: {
       backgroundColor: '#f9f9f9',
@@ -39,7 +40,6 @@ function DropdownMenu({ label, children, defaultOpen}) {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'left',
-
     },
     dropdownItem: {
       color: 'black',
