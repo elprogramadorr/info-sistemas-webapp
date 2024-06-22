@@ -7,6 +7,7 @@ import ProcesoScreen from "./ProcesoScreen";
 import RequisitoScreen from "./RequisitoScreen.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import EmailIcon from '@mui/icons-material/Email';
 
 function DropdownItem({ text, isSelected, onClick }) {
   const styles = {
@@ -55,6 +56,23 @@ const EstudiantesRegulares = () => {
       padding: '10px',
       border: '2px solid #ccc',
       borderRadius: '50%',
+    },
+    containerStyle:{
+      display: 'flex',
+      marginTop: '1.5rem',
+      gap: '2rem',
+      flexWrap: 'wrap',
+    },
+    sidebar: {
+      flex: '0 0 280px',
+      display: 'flex',
+      flexDirection: 'column',
+      //gap: '1rem',
+    },
+    content: {
+      flex: '1',
+      display: 'flex',
+      flexDirection: 'column',
     }
   }; 
   const scrollToTop = () => {
@@ -91,8 +109,8 @@ const EstudiantesRegulares = () => {
 
   return (
     <>
-      <div style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'row', gap: '2rem', flexWrap: 'wrap', }}>
-        <div>
+      <div style={sty.containerStyle}>
+        <div style={sty.sidebar}>
           <DropdownMenu label="Inscripciones" defaultOpen={true}>
             <DropdownItem text="Fechas" isSelected={selectedItem === "Fechas"} onClick={() => handleItemClick("Fechas")} />
             <DropdownItem text="Requisitos" isSelected={selectedItem === "Requisitos"} onClick={() => handleItemClick("Requisitos")} />
@@ -115,8 +133,15 @@ const EstudiantesRegulares = () => {
             <DropdownItem text="Buscador de proyectos" isSelected={selectedItem === "Buscador de proyectos"} onClick={() => handleItemClick("Buscador de proyectos")} />
             <DropdownItem text="Convocatorias" isSelected={selectedItem === "Convocatorias"} onClick={() => handleItemClick("Convocatorias")} />
           </DropdownMenu>
+          <div style={{marginLeft:'2rem'}}>
+            <h3>Contactos</h3>
+            <div style={{display:'flex', alignItems:'center', gap:'5px'}}>
+              <EmailIcon style={{fontSize: '1.5rem', color: '#243761'}} />
+              <a href="mailto:contactoDepartamento@gmail.com">contactoDepartamento@gmail.com</a>
+            </div>
+          </div>
         </div>
-        <div style={{ width: '75%'}}>
+        <div style={sty.content}>
           <MigaDePan></MigaDePan>
           <div>
             {renderContent()}

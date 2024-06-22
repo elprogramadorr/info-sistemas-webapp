@@ -87,7 +87,6 @@ const ProcesoScreen = () => {
     },
     fieldMain: {
       backgroundColor: '#020837',
-      paddingLeft: 40,
       paddingRight: 30,
       width: '80%', 
       marginLeft:'3rem'
