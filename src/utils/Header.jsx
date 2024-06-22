@@ -79,7 +79,7 @@ export default function Header() {
           />
           <Tab
             component={Link}
-            to="/carrera"
+            to="/estudiantes-nuevos"
             value="two" label="Estudiantes Nuevos"
             sx={styles.tab} />
           <Tab

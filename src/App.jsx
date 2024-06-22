@@ -7,6 +7,8 @@ import EstudiantesRegulares from './screens/ModuloEstudiantesRegulares'
 import Home from './screens/Home'
 import Layout from './screens/Layout'
 
+import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos'
+
 function App() {
   return (
 <<<<<<< HEAD
@@ -38,6 +40,7 @@ function App() {
       <Route path="/" element={
         <Layout><Home/></Layout> }/>
       <Route path="/estudiantes-regulares" element={<Layout><EstudiantesRegulares/></Layout>} />
+      <Route path="/estudiantes-nuevos" element={<Layout><EstudiantesNuevos/></Layout>} />
     </Routes>
     </BrowserRouter>
 >>>>>>> a2db1b41d130c100e9689fb28f9f4da95f64ea80
