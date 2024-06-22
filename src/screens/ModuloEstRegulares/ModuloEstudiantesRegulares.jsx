@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import EmailIcon from '@mui/icons-material/Email';
 import Auxiliaturas from "./Auxiliaturas.jsx";
+import CambioCarrera from "./CambioCarrera.jsx";
 
 function DropdownItem({ text, isSelected, onClick }) {
   const styles = {
@@ -100,7 +101,7 @@ const EstudiantesRegulares = () => {
     } else if (selectedItem === "Auxiliaturas") {
       return <Auxiliaturas />
     } else if (selectedItem === "Cambio de carrera") {
-      return <div> Cambio </div>
+      return <CambioCarrera />
     } else if (selectedItem === "Titulación") {
       return <div> Titu </div>
     } else if (selectedItem === "Buscador de proyectos") {
