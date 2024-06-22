@@ -1,5 +1,5 @@
 // DropdownMenu.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function DropdownMenu({ label, children, defaultOpen}) {
   const [isOpen, setIsOpen] = useState(defaultOpen);

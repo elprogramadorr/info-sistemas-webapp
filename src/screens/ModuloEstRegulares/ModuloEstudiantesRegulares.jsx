@@ -5,6 +5,7 @@ import MigaDePan from "../../utils/MigaDePan";
 import FechasScreen from "./FechasScreen";
 import ProcesoScreen from "./ProcesoScreen";
 import RequisitoScreen from "./RequisitoScreen.jsx";
+import Construccion from "./Construccion.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import EmailIcon from '@mui/icons-material/Email';
@@ -103,7 +104,7 @@ const EstudiantesRegulares = () => {
     } else if (selectedItem === "Buscador de proyectos") {
       return <div> Buscador </div>
     } else {
-      return <div> Construccion </div>
+      return <Construccion />
     }
   }
 
