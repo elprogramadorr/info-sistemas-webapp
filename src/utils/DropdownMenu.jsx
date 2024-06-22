@@ -1,14 +1,13 @@
 // DropdownMenu.js
 import React, { useState } from 'react';
 
+
 function DropdownMenu({ label, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
-    if(localStorage.getItem('isPressedEstRegular') === 'false') {
         setIsOpen(!isOpen);
-        localStorage.setItem('primerNivelEstRegular', label);
-    }
+        console.log("es ")
     
   };
 
@@ -50,12 +49,14 @@ function DropdownMenu({ label, children }) {
       <button style={styles.dropdownButton} onClick={toggleDropdown}>
         {label}
       </button>
-      {isOpen && (
+      {isOpen && children!==undefined && (
         <div style={styles.dropdownContent}>
           {children}
         </div>
       )}
+      
     </div>
+    
   );
 }
 
