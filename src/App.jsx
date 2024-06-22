@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
-import EstudiantesRegulares from './screens/ModuloEstudiantesRegulares'
+import EstudiantesRegulares from './screens/ModuloEstRegulares/ModuloEstudiantesRegulares'
 import Home from './screens/Home'
 import Layout from './screens/Layout'
 
