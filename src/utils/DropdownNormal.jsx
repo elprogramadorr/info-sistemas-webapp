@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { InputLabel, MenuItem, FormControl, Select } from "@mui/material";
+import { InputLabel, MenuItem, FormControl, Select, FormHelperText } from "@mui/material";
 
-const DropdownNormal = ({ label, items, onChange }) => {
+const DropdownNormal = ({ label, items, onChange, messageError='' }) => {
     const [selectedItem, setSelectedItem] = useState('');
 
     const handleChange = (event) => {
@@ -24,6 +24,7 @@ const DropdownNormal = ({ label, items, onChange }) => {
                     <MenuItem key={index} value={item.value}>{item.label}</MenuItem>
                 ))}
             </Select>
+            <FormHelperText style={{color: 'red'}}>{messageError}</FormHelperText>
         </FormControl>
     );
 };

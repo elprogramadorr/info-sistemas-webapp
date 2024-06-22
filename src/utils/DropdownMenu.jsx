@@ -20,7 +20,7 @@ function DropdownMenu({ label, children, defaultOpen}) {
       
     },
     dropdownButton: {
-      backgroundColor: '#243761',
+      background: 'linear-gradient(to right, #0F2F60, #124A85)',
       width: '280px',
       padding: '10px 20px',
       fontSize: '16px',

@@ -12,6 +12,8 @@ const materiasAll = [
 const CambioCarrera = () => {
 	const [esPosible, setEsPosible] = useState('');
 	const [selectedItem, setSelectedItem] = useState('');
+	const [origen, setOrigen] = useState('');
+	const [destino, setDestino] = useState('');
 
 	useEffect(() => {
 		console.log(selectedItem);
@@ -47,6 +49,7 @@ const CambioCarrera = () => {
 			flexWrap: 'wrap',
 			gap: '10px',
 			width: '100%',
+			justifyContent: 'center',
 		}
 	}
 
@@ -80,13 +83,21 @@ const CambioCarrera = () => {
 						<li>Llenar formulario por el operador de Ventanilla de despachos, con la firma del jefe de registros</li>
 					</ul>
 				</fieldset>
-				<fieldset style={{ width: '93%', display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent:'center' }}>
-					<legend>Convalidación de materias</legend>
+				<div style={{ width: 'calc(90% + 10px)', display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent:'center', backgroundColor:'#F0F6FF', }}>
+					<h4 style={{color:'black'}}>Convalidación de materias</h4>
 					<div>
-						<DropdownNormal label='Carrera de origen' items={[{ value: '1', label: 'Ingeniería en Informática' }, { value: '2', label: 'Ingeniería en Sistemas' }]} />
-						<DropdownNormal label='Carrera de destino' items={[{ value: '1', label: 'Ingeniería en Informática' }, { value: '2', label: 'Ingeniería en Sistemas' }]} />
+						<DropdownNormal 
+							label='Carrera de origen' 
+							items={[{ value: '1', label: 'Ingeniería en Informática' }, { value: '2', label: 'Ingeniería en Sistemas' }]} 
+							onChange={setOrigen}/>
+						<DropdownNormal 
+							label='Carrera de destino' 
+							items={[{ value: '1', label: 'Ingeniería en Informática' }, { value: '2', label: 'Ingeniería en Sistemas' }]}
+							onChange={setDestino}
+							messageError={origen === destino ? 'La carrera de origen y destino no pueden ser iguales' : ''}
+						/>
 					</div>
-					<p>Para realizar la convalidación de materias, seleccione una materia para ver si es posible de convalidar:</p>
+					<p style={{color:'black'}}>Para realizar la convalidación de materias, seleccione una materia para ver si es posible de convalidar:</p>
 					<div style={{display:'flex', gap:'15px', alignItems:'center'}}>
 						<DropdownNormal
 							label='Materias'
@@ -96,13 +107,13 @@ const CambioCarrera = () => {
 
 						<TextField
 							id='outlined-basic'
-							label='Materia a convalidar'
+							label='¿Es posible convalidar?'
 							variant='standard'
 							style={{ width: '250px', backgroundColor: 'white', padding: '10px', borderRadius: '5px', fontFamily: 'Nunito Sans'}}
 							value={esPosible}
 						/>
 					</div>
-				</fieldset>
+				</div>
 			</div>
 		</div>
 	);

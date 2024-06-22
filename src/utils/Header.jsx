@@ -63,7 +63,7 @@ export default function Header() {
             flexDirection: isMobile? 'column':'row',
             justifyContent: isMobile? 'center':'space-between',
             alignItems: 'center',
-            backgroundColor: '#A9070790',
+            background: 'linear-gradient(to right, #A9070790, #A90707)',
 
           }
         }}
