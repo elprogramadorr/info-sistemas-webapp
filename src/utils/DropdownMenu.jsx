@@ -1,5 +1,7 @@
 // DropdownMenu.js
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 function DropdownMenu({ label, children, defaultOpen}) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -25,7 +27,8 @@ function DropdownMenu({ label, children, defaultOpen}) {
       color: 'white',
       cursor: 'pointer',
       border: '1px solid white',
-    //   boxShadow: '0px 3px 16px 0px #F2F2F2',
+      display: 'flex',
+      justifyContent: 'space-between',
     },
     dropdownContent: {
       backgroundColor: '#f9f9f9',
@@ -49,6 +52,7 @@ function DropdownMenu({ label, children, defaultOpen}) {
     <div style={styles.dropdown}>
       <button style={styles.dropdownButton} onClick={toggleDropdown}>
         {label}
+        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </button>
       {isOpen && (
         <div style={styles.dropdownContent}>
