@@ -12,11 +12,10 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-<<<<<<< HEAD
+
     "@fontsource/roboto": "^5.0.13",
     "@mui/icons-material": "^5.15.20",
-=======
->>>>>>> a2db1b41d130c100e9689fb28f9f4da95f64ea80
+
     "@mui/material": "^5.15.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
