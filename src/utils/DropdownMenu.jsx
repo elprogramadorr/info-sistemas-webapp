@@ -1,8 +1,8 @@
 // DropdownMenu.js
 import React, { useState } from 'react';
 
-function DropdownMenu({ label, children }) {
-  const [isOpen, setIsOpen] = useState(false);
+function DropdownMenu({ label, children, defaultOpen}) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggleDropdown = () => {
     //if(localStorage.getItem('isPressedEstRegular') === 'false') {
