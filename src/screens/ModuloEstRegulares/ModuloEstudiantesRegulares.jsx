@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DropdownMenu from "../../utils/DropdownMenu";
 import { Button } from "@mui/material";
 import MigaDePan from "../../utils/MigaDePan";
@@ -11,6 +11,8 @@ import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import EmailIcon from '@mui/icons-material/Email';
 import Auxiliaturas from "./Auxiliaturas.jsx";
 import CambioCarrera from "./CambioCarrera.jsx";
+import Titulacion from "./Titulacion.jsx";
+import BuscadorProyectos from "./BuscadorProyectos.jsx";
 
 function DropdownItem({ text, isSelected, onClick }) {
   const styles = {
@@ -31,7 +33,26 @@ function DropdownItem({ text, isSelected, onClick }) {
 
 const EstudiantesRegulares = () => {
   const [selectedItem, setSelectedItem] = useState('Fechas');
+  const [showScrollIcons, setShowScrollIcons] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+      setShowScrollIcons(scrollHeight > clientHeight && scrollTop > 0);
+    };
 
+    handleScroll(); // Check on mount
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll); // Check on resize
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
   const handleItemClick = (text) => {
     setSelectedItem(text);
     localStorage.setItem('segundoNivelEstRegulares', text);
@@ -103,9 +124,9 @@ const EstudiantesRegulares = () => {
     } else if (selectedItem === "Cambio de carrera") {
       return <CambioCarrera />
     } else if (selectedItem === "Titulación") {
-      return <div> Titu </div>
+      return <Titulacion />
     } else if (selectedItem === "Buscador de proyectos") {
-      return <div> Buscador </div>
+      return <BuscadorProyectos/>
     } else {
       return <Construccion />
     }
@@ -130,7 +151,7 @@ const EstudiantesRegulares = () => {
           <DropdownMenu label="Documentos" defaultOpen={false} >
             <DropdownItem text="Guías de elaboración" isSelected={selectedItem === "Guías de elaboración"} onClick={() => handleItemClick("Guías de elaboración")} />
             <DropdownItem text="Certificaciones de solvencia" isSelected={selectedItem === "Certificaciones de solvencia"} onClick={() => handleItemClick("Certificaciones de solvencia")} />
-            <DropdownItem text="Titulación" isSelected={selectedItem === "Titulación"} onClick={() => handleItemClick("Titulación")} />
+            <DropdownItem text="Titulación" isSelected={selectedItem === "Titulacion"} onClick={() => handleItemClick("Titulación")} />
           </DropdownMenu>
           <DropdownMenu label="Proyectos de fin de carrera" defaultOpen={false} >
             <DropdownItem text="Banco de temas disponibles" isSelected={selectedItem === "Banco de temas disponibles"} onClick={() => handleItemClick("Banco de temas disponibles")} />
@@ -152,11 +173,15 @@ const EstudiantesRegulares = () => {
           </div>
         </div>
       </div>
-      <FontAwesomeIcon 
+      {showScrollIcons && (
+        <>
+        <FontAwesomeIcon 
         icon={faArrowUp} 
         style={sty.scrollIconTop} 
         onClick={scrollToTop} 
       />
+        </>
+      )}
       <FontAwesomeIcon 
         icon={faArrowDown} 
         style={sty.scrollIcon} 

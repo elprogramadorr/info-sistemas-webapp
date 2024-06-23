@@ -29,7 +29,7 @@ const Timeline = () => {
       position: 'relative',
       cursor: 'pointer',
     },
-    circle: (seleccionado)=> ({
+    circle: (seleccionado) => ({
       width: '120px',
       height: '120px',
       borderRadius: '50%',
@@ -50,9 +50,9 @@ const Timeline = () => {
     <div style={styles.timelineContainer}>
       <div style={styles.timeline}>
         {events.map((event, index) => (
-          <div 
-            key={index} 
-            style={styles.timelineEvent} 
+          <div
+            key={index}
+            style={styles.timelineEvent}
             onClick={() => setSelectedEvent(event)}
             onMouseEnter={() => setSeleccionado(index)}
             onMouseLeave={() => setSeleccionado(null)}
@@ -122,13 +122,16 @@ const FechasScreen = () => {
             <li>Monto del total de matrícula Bs.-15</li>
           </ul>
         </fieldset>
-        <fieldset style={{width: '80%', marginLeft:'3rem'}}>
+        <fieldset style={{ width: '80%', marginLeft: '3rem' }}>
           <Tooltip title='Haga click en un círculo para conocer más información sobre este'><legend>Proceso de inscripción</legend></Tooltip>
           <Timeline />
         </fieldset>
+        <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wfChD5hxyX4?si=_B4Nk7OSSdnHNHxP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       </div>
       <div>
-        
+
       </div>
     </div>
   )
