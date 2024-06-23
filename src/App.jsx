@@ -7,7 +7,7 @@ import EstudiantesRegulares from './screens/ModuloEstudiantesRegulares'
 import Home from './screens/Home'
 import Layout from './screens/Layout'
 
-import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos'
+import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos/ModuloEstudiantesNuevos'
 
 function App() {
   return (
