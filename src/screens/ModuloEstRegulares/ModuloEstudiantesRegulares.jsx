@@ -151,7 +151,7 @@ const EstudiantesRegulares = () => {
           <DropdownMenu label="Documentos" defaultOpen={false} >
             <DropdownItem text="Guías de elaboración" isSelected={selectedItem === "Guías de elaboración"} onClick={() => handleItemClick("Guías de elaboración")} />
             <DropdownItem text="Certificaciones de solvencia" isSelected={selectedItem === "Certificaciones de solvencia"} onClick={() => handleItemClick("Certificaciones de solvencia")} />
-            <DropdownItem text="Titulación" isSelected={selectedItem === "Titulacion"} onClick={() => handleItemClick("Titulación")} />
+            <DropdownItem text="Titulación" isSelected={selectedItem === "Titulación"} onClick={() => handleItemClick("Titulación")} />
           </DropdownMenu>
           <DropdownMenu label="Proyectos de fin de carrera" defaultOpen={false} >
             <DropdownItem text="Banco de temas disponibles" isSelected={selectedItem === "Banco de temas disponibles"} onClick={() => handleItemClick("Banco de temas disponibles")} />
