@@ -1,12 +1,14 @@
 // DropdownMenu.js
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-
-function DropdownMenu({ label, children }) {
-  const [isOpen, setIsOpen] = useState(false);
+function DropdownMenu({ label, children, defaultOpen}) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggleDropdown = () => {
         setIsOpen(!isOpen);
+        localStorage.setItem('primerNivelEstRegular', label);
         console.log("es ")
     
   };
@@ -24,7 +26,9 @@ function DropdownMenu({ label, children }) {
       color: 'white',
       cursor: 'pointer',
       border: '1px solid white',
-    //   boxShadow: '0px 3px 16px 0px #F2F2F2',
+      display: 'flex',
+      justifyContent: 'space-between',
+      fontFamily: "Nunito Sans",
     },
     dropdownContent: {
       backgroundColor: '#f9f9f9',
@@ -35,7 +39,6 @@ function DropdownMenu({ label, children }) {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'left',
-
     },
     dropdownItem: {
       color: 'black',
@@ -48,6 +51,7 @@ function DropdownMenu({ label, children }) {
     <div style={styles.dropdown}>
       <button style={styles.dropdownButton} onClick={toggleDropdown}>
         {label}
+        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </button>
       {isOpen && children!==undefined && (
         <div style={styles.dropdownContent}>

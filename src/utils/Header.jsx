@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [value, setValue] = React.useState('one');
-  const isMobile = useMediaQuery('(max-width:1160px)');
+  const isMobile = useMediaQuery('(max-width:1000px)');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -44,7 +44,8 @@ export default function Header() {
       '&:hover': {
         backgroundColor: '#f0f0f0',
         color: '#3f51b5',
-      }
+      },
+      fontFamily: "Nunito Sans",
     }
   };
 
@@ -62,7 +63,7 @@ export default function Header() {
             flexDirection: isMobile? 'column':'row',
             justifyContent: isMobile? 'center':'space-between',
             alignItems: 'center',
-            backgroundColor: '#FF000040',
+            backgroundColor: '#A9070790',
 
           }
         }}

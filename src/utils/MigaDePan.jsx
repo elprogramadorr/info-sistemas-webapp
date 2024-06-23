@@ -35,7 +35,7 @@ export default function MigaDePan() {
     >
       {localStorage.getItem('primerNivelEstRegular')}
     </Link>,
-    <Typography key="3" color="white">
+    <Typography key="3" color="white" style={{fontFamily:'Nunito Sans'}}>
       {localStorage.getItem('segundoNivelEstRegulares')}
     </Typography>,
   ];
@@ -45,7 +45,7 @@ export default function MigaDePan() {
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="small" />}
         aria-label="breadcrumb"
-        sx={{ color: 'white' }}
+        sx={{ color: 'white' , fontFamily: "Nunito Sans"}}
       >
         {breadcrumbs}
       </Breadcrumbs>
