@@ -11,8 +11,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Fab from '@material-ui/core/Fab';
 import SendIcon from '@mui/icons-material/Send';
-import { IconButton, Stack } from '@mui/material';
-import { Margin } from '@mui/icons-material';
+import { IconButton, Stack,Link } from '@mui/material';
+
 
 
    
@@ -85,9 +85,9 @@ const Chat = () => {
             <TextField id="outlined-basic-email" InputProps={{}} onChange={handleChange} onKeyDown={keyPress} value={message} label="Type Something" style={{width:"85%"}}/>
              <IconButton color="primary" onClick={() =>addMessage(message)} aria-label="add"><SendIcon /></IconButton >
              <Divider />
-             <Typography align='center'>
+             <Link align='center'>
                 Contactenos
-             </Typography>
+             </Link>
              
             </Box>
         );

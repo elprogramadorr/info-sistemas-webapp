@@ -15,6 +15,7 @@ import IconButton from "@mui/material/IconButton";
 import Popover from '@mui/material/Popover';
 import MapUMSS from './mapa';
 import Chat from './chat';
+import MayorPromedio from './MENExelencia';
 
 
 function DropdownItem({ text,mesage,content,bread,listaL }) {
@@ -85,7 +86,7 @@ const EstudiantesRegulares = () => {
                         />
                         <DropdownItem text="Mayor Promedio Estudiantil" 
                         mesage={setMesage} 
-                        content={"Sed eget ligula risus. Donec eu elit lorem. Sed sed iaculis urna. Morbi eget finibus dui."}
+                        content={<MayorPromedio></MayorPromedio>}
                         bread={setLista}
                         listaL={[...ListaOriginal,{"/notiene":"Promedio Estudiantil"}]}
                         />

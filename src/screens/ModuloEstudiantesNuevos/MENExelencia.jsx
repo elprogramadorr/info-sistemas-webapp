@@ -3,13 +3,18 @@ import Box from '@material-ui/core/Box';
 
 
 
-function CursoPreuniversitario(){
+function MayorPromedio(){
     return (<Box>
-        <h1>Admision por curso  preuniversitario</h1>
-        <p>La admision por curso preuniversitario es una modalidad, permite a los postulantes bachilleres, iniciar su ciclo unervitario
-            mediante un proceso formativo dirigido a fortalecer sus conocimientos,
-            mejorar sus capacidades cognoscitivas y desarrollar sus aptitudes para realizar estudios superiores.
-        </p>    
+        <h1>Admision por Mayor Promedio Academico</h1>
+        <p>
+        Estarán habilitados un hombre y una mujer por colegio, que cuenten con el mejor rendimiento académico de colegios fiscales, particulares y de convenio del Departamento de Cochabamba. Para acceder a través de admisión directa a la Universidad Mayor de San Simón. Se deberán considerar las siguientes excepciones:
+        <ul>
+            <li>No contempla la Admisión a las carreras del área de salud (Medicina, Fisioterapia, Nutrición, Bioquímica, Odontología y Enfermería)</li>
+            <li>Para las carreras de Psicología y Trabajo Social previamente deben realizar su test de personalidad (Oficina Educativa de la Facultad de Humanidades).</li>
+            <li>Para el Programa de Licenciatura en Ciencias de la Actividad Física y del Deporte previamente deben realizar su Prueba de Suficiencia Fisica (Oficina Educativa de la Facultad de Humanidades).</li>
+            <li>Programa de Licenciatura en Música requieren previamente una Entrevista de admisión (Oficina Educativa de la Facultad de Humanidades).</li>
+        </ul>
+         </p>    
        {/* <p>
             
 
@@ -26,4 +31,4 @@ Integer quis porttitor odio, sit amet egestas turpis. Maecenas pretium ex vel te
     </Box>
 );
 }
-export default CursoPreuniversitario;
+export default MayorPromedio;
