@@ -1,12 +1,27 @@
-import { width } from '@fortawesome/free-solid-svg-icons/fa0';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 import DropdownNormal from '../../utils/DropdownNormal';
 import { TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 const materiasAll = [
-	{ value: '10', label: 'Matemáticas I', convalidable: 'Es posible convalidar' },
-	{ value: '11', label: 'Matemáticas II', convalidable: 'No es posible convalidar' },
+	{ value: '10', label: 'Inglés I', convalidable: 'Es posible convalidar' },
+	{ value: '11', label: 'Física General', convalidable: 'Es posible convalidar' },
+	{ value: '12', label: 'Algebra I', convalidable: 'Es posible convalidar' },
+	{ value: '13', label: 'Cálculo I', convalidable: 'Es posible convalidar' },
+	{ value: '14', label: 'Intro. a la Programación', convalidable: 'Es posible convalidar' },
+	{ value: '15', label: 'Inglés II', convalidable: 'Es posible convalidar' },
+	{ value: '16', label: 'Algebra II', convalidable: 'Es posible convalidar' },
+	{ value: '17', label: 'Cálculo II', convalidable: 'Es posible convalidar' },
+	{ value: '18', label: 'Elem. de progra. y estruct. de datos', convalidable: 'Es posible convalidar' },
+	{ value: '19', label: 'Arquitectura de computadoras I', convalidable: 'Es posible convalidar' },
+	{ value: '20', label: 'Programación', convalidable: 'No es posible convalidar' },
+	{ value: '21', label: 'Calculo Numérico', convalidable: 'Es posible convalidar' },
+	{ value: '22', label: 'Lógica', convalidable: 'No es posible convalidar' },
+	{ value: '23', label: 'Arquitectura de computadoras II', convalidable: 'Es posible convalidar' },
+	{ value: '24', label: 'Metodologias de Investigación', convalidable: 'No es posible convalidar' },
+	{ value: '25', label: 'Organización y Métodos', convalidable: 'No es posible convalidar' },
+	{ value: '26', label: 'Estadística I', convalidable: 'Es posible convalidar' },
+	{ value: '27', label: 'Teoría de grafos', convalidable: 'No es posible convalidar' },
 ];
 
 const CambioCarrera = () => {

@@ -126,6 +126,9 @@ const RequisitoScreen = () => {
           <Tooltip title='Haga click en un círculo para conocer más información sobre este'><legend>Proceso de inscripción</legend></Tooltip>
           <Timeline />
         </fieldset>
+        <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wfChD5hxyX4?si=_B4Nk7OSSdnHNHxP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       </div>
       <div>
         
