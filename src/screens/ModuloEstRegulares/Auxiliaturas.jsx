@@ -125,7 +125,7 @@ const Auxiliaturas = () => {
 				<h1>Proceso de Auxiliatura</h1>
 				<div style={styles.botondescarga}>
 					<SaveAltIcon />
-					<a href='https://drive.google.com/file/d/1X3qfrO3IxlT1QJdSYpDdPssshCUZSls9/view' target='_blank' style={styles.boton}>Descargar Convocatoria Docencia</a>
+					<a href='https://drive.google.com/file/d/1X3qfrO3IxlT1QJdSYpDdPssshCUZSls9/view' target='_blank' style={styles.boton}>Descargar Convocatoria</a>
 				</div>
 			</div>
 			<div style={styles.contenido}>

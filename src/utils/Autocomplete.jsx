@@ -47,20 +47,26 @@ const Autocomplete = () => {
 
   return (
     <div style={{ position: 'relative', width: '300px' }}>
-      <input
-        type="text"
-        value={query}
-        onChange={handleInputChange}
-        onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-        style={{ width: '100%', padding: '0.5rem', boxSizing: 'border-box',backgroundColor:'white', color:'black' }}
-      />
+      <div>
+        <input
+          type="text"
+          value={query}
+          onChange={handleInputChange}
+          onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+          style={{ width: '100%', padding: '0.5rem', boxSizing: 'border-box', backgroundColor: 'white', color: 'black' }}
+        />
+        <button onClick={handleSearch} style={{ position: 'absolute', right: '0', top: '0', padding: '0.2rem', cursor: 'pointer', backgroundColor:'#6A84B8'}} >
+          <SearchIcon />
+        </button>
+      </div>
+
       {suggestions.length > 0 && (
         <ul style={{ listStyle: 'none', padding: '0', margin: '0', position: 'absolute', width: '100%', boxShadow: '0 2px 5px rgba(0,0,0)', backgroundColor: 'white' }}>
           {suggestions.map((suggestion, index) => (
             <li
               key={index}
               onClick={() => handleSuggestionClick(suggestion)}
-              style={{ padding: '0.5rem', cursor: 'pointer', backgroundColor:'white', color:'black' }}
+              style={{ padding: '0.5rem', cursor: 'pointer', backgroundColor: 'white', color: 'black' }}
             >
               {suggestion}
             </li>
