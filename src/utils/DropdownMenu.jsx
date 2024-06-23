@@ -7,7 +7,6 @@ function DropdownMenu({ label, children }) {
 
   const toggleDropdown = () => {
         setIsOpen(!isOpen);
-        console.log("es ")
     
   };
 

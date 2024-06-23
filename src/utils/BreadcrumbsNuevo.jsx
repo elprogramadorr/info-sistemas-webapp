@@ -15,13 +15,13 @@ function handleClick(event) {
 }
 
 export default function MigaDePan(lista) {
-  const itemd=Object.values(lista)[0] //ni idea, pero supongo es el manejo de objetos pinche javascrip te complicas tu solito
+  const itemd=Object.values(lista)[0] //ni idea, pero supongo es el manejo de objetos que para evitar problemsa servidor-cliente
   const breadcrumbs = []
   let i=0
   while (i < itemd.length-1){
     let valor=Object.values(itemd[i])
     let llave=Object.keys(itemd[i])
-    breadcrumbs.push(<Link underline="hover" key={i} color="white" href={llave[i]} onClick={()=>navigation.navigate({valor})}>
+    breadcrumbs.push(<Link underline="hover" key={i} color="white" href={llave} >
       {valor}</Link>)
       i=i+1;
   }
