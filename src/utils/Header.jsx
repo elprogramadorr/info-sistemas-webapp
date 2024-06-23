@@ -90,17 +90,17 @@ export default function Header() {
             sx={styles.tab} />
           <Tab
             component={Link}
-            to="/carrera"
+            to="/docentes"
             value="four" label="Docentes"
             sx={styles.tab} />
           <Tab
             component={Link}
-            to="/carrera"
+            to="/graduados"
             value="five" label="Graduados"
             sx={styles.tab} />
           <Tab
             component={Link}
-            to="/carrera"
+            to="/ext-inv"
             value="six" label="Ext-Invest"
             sx={styles.tab} />
         </div>
