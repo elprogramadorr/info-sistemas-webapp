@@ -16,7 +16,7 @@ import Popover from '@mui/material/Popover';
 import MapUMSS from './mapa';
 import Chat from './chat';
 import MayorPromedio from './MENExelencia';
-
+import Paginacion from './MENpaginacion';
 
 function DropdownItem({ text,mesage,content,bread,listaL }) {
     
@@ -95,7 +95,7 @@ const EstudiantesRegulares = () => {
                     <DropdownMenu label="Preguntas Frecuentes">
                     <DropdownItem text="Preguntas" 
                         mesage={setMesage} 
-                        content={"Sed eget ligula risus. finibus dui."}
+                        content={<Paginacion></Paginacion>}
                         bread={setLista}
                         listaL={[...ListaOriginal,{"/notiene":"Preguntas"}]}
                         />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+
 import Box from '@material-ui/core/Box';
 import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
@@ -82,12 +82,15 @@ const Chat = () => {
             </List>
 
             <Divider />
-            <TextField id="outlined-basic-email" InputProps={{}} onChange={handleChange} onKeyDown={keyPress} value={message} label="Type Something" style={{width:"85%"}}/>
+            <TextField id="outlined-basic-email" InputProps={{}} onChange={handleChange} onKeyDown={keyPress} value={message} label="Escribe algo.." style={{width:"85%"}}/>
              <IconButton color="primary" onClick={() =>addMessage(message)} aria-label="add"><SendIcon /></IconButton >
              <Divider />
-             <Link align='center'>
-                Contactenos
+             <Link justifyContent={'center'}>
+             <Typography align='center'>Contactenos</Typography>
+                
              </Link>
+             
+             
              
             </Box>
         );
