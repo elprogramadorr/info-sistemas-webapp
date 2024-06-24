@@ -7,10 +7,9 @@ function DropdownMenu({ label, children, defaultOpen}) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggleDropdown = () => {
-    //if(localStorage.getItem('isPressedEstRegular') === 'false') {
         setIsOpen(!isOpen);
         localStorage.setItem('primerNivelEstRegular', label);
-    //}
+        console.log("es ")
     
   };
 
@@ -54,12 +53,14 @@ function DropdownMenu({ label, children, defaultOpen}) {
         {label}
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </button>
-      {isOpen && (
+      {isOpen && children!==undefined && (
         <div style={styles.dropdownContent}>
           {children}
         </div>
       )}
+      
     </div>
+    
   );
 }
 
