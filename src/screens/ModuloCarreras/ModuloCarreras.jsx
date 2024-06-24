@@ -8,6 +8,8 @@ import Autoridades from './Autoridades';
 import Consejo from './Consejo';
 import Curriculum from './Curriculum';
 import MercadoDeTrabajo from './MercadoDeTrabajo';
+import LineasDeEstudio from './LineasDeEstudio';
+import MisionVisionObjetivos from './MisionVisionObjetivos';
 
 function DropdownItem({ text, isSelected, onClick }) {
   const styles = {
@@ -114,10 +116,10 @@ const ModuloCarreras = () => {
         return <Curriculum/>;
       case 'Mercado de Trabajo':
         return <MercadoDeTrabajo/>;
-      case 'Cambio de carrera':
-        return <div>Cambio de carrera Dummy Content</div>;
-      case 'Titulación':
-        return <div>Titulación Dummy Content</div>;
+      case 'Lineas de Estudio':
+        return <LineasDeEstudio/>
+      case 'Mision':
+        return <MisionVisionObjetivos/>;
       case 'Buscador de proyectos':
         return <div>Buscador de proyectos Dummy Content</div>;
       default:
@@ -135,7 +137,7 @@ const ModuloCarreras = () => {
             <DropdownItem text="Lineas de Estudio" isSelected={selectedItem === 'Lineas de Estudio'} onClick={() => handleItemClick('Lineas de Estudio')} />
           </DropdownMenu>
           <DropdownMenu label="Misión, Visión" defaultOpen={false}>
-            <DropdownItem text="Misión, Visión" isSelected={selectedItem === 'Auxiliaturas'} onClick={() => handleItemClick('Auxiliaturas')} />
+            <DropdownItem text="Mision" isSelected={selectedItem === 'Mision'} onClick={() => handleItemClick('Mision')} />
             <DropdownItem text="Objetivos" isSelected={selectedItem === 'Objetivos'} onClick={() => handleItemClick('Objetivos')} />
             <DropdownItem text="Historia" isSelected={selectedItem === 'Historia'} onClick={() => handleItemClick('Historia')} />
           </DropdownMenu>
