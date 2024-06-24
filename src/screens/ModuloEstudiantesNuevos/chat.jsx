@@ -1,17 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-import Paper from '@material-ui/core/Paper';
 
-import Box from '@material-ui/core/Box';
-import Divider from '@material-ui/core/Divider';
-import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Fab from '@material-ui/core/Fab';
+import { Box } from '@mui/system';
+import { Typography,List,ListItem,ListItemText,TextField } from '@mui/material';
+
 import SendIcon from '@mui/icons-material/Send';
-import { IconButton, Stack,Link } from '@mui/material';
+import { IconButton, Stack,Link,Divider } from '@mui/material';
 
 
 

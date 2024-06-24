@@ -109,7 +109,7 @@ export default function Header() {
               </IconButton>
               <div style={styles.mobileMenu}>
                 <Tab component={Link} to="/carrera" value="one" label="Carrera" sx={styles.tab} onClick={handleMenuToggle} />
-                <Tab component={Link} to="/carrera" value="two" label="Estudiantes Nuevos" sx={styles.tab} onClick={handleMenuToggle} />
+                <Tab component={Link} to="/estudiantes-nuevos" value="two" label="Estudiantes Nuevos" sx={styles.tab} onClick={handleMenuToggle} />
                 <Tab component={Link} to="/estudiantes-regulares" value="three" label="Estudiantes Regulares" sx={styles.tab} onClick={handleMenuToggle} />
                 <Tab component={Link} to="/docentes" value="four" label="Docentes" sx={styles.tab} onClick={handleMenuToggle} />
                 <Tab component={Link} to="/graduados" value="five" label="Graduados" sx={styles.tab} onClick={handleMenuToggle} />
@@ -127,7 +127,7 @@ export default function Header() {
             >
               <div style={styles.tabs}>
                 <Tab component={Link} to="/carrera" value="one" label="Carrera" sx={styles.tab} />
-                <Tab component={Link} to="/carrera" value="two" label="Estudiantes Nuevos" sx={styles.tab} />
+                <Tab component={Link} to="/estudiantes-nuevos" value="two" label="Estudiantes Nuevos" sx={styles.tab} />
                 <Tab component={Link} to="/estudiantes-regulares" value="three" label="Estudiantes Regulares" sx={styles.tab} />
                 <Tab component={Link} to="/docentes" value="four" label="Docentes" sx={styles.tab} />
                 <Tab component={Link} to="/graduados" value="five" label="Graduados" sx={styles.tab} />

@@ -7,6 +7,7 @@ import EstudiantesRegulares from './screens/ModuloEstRegulares/ModuloEstudiantes
 import Home from './screens/Home'
 import Layout from './screens/Layout'
 import Construccion from './screens/ModuloEstRegulares/Construccion'
+import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos/ModuloEstudiantesNuevos'
 
 function App() {
   return (
