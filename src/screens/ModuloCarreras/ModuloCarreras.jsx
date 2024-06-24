@@ -7,6 +7,8 @@ import DropdownMenu from '../../utils/DropdownMenu';
 import Autoridades from './Autoridades';
 import Consejo from './Consejo';
 import Curriculum from './Curriculum';
+import MercadoDeTrabajo from './MercadoDeTrabajo';
+
 function DropdownItem({ text, isSelected, onClick }) {
   const styles = {
     padding: 4,
@@ -110,8 +112,8 @@ const ModuloCarreras = () => {
         return <Consejo />;
       case 'Malla Curricular':
         return <Curriculum/>;
-      case 'Auxiliaturas':
-        return <div>Auxiliaturas Dummy Content</div>;
+      case 'Mercado de Trabajo':
+        return <MercadoDeTrabajo/>;
       case 'Cambio de carrera':
         return <div>Cambio de carrera Dummy Content</div>;
       case 'Titulación':
