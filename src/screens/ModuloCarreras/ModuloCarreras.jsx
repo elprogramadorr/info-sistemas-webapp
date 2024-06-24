@@ -6,6 +6,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import DropdownMenu from '../../utils/DropdownMenu';
 import Autoridades from './Autoridades';
 import Consejo from './Consejo';
+import Curriculum from './Curriculum';
 function DropdownItem({ text, isSelected, onClick }) {
   const styles = {
     padding: 4,
@@ -107,8 +108,8 @@ const ModuloCarreras = () => {
         return <Autoridades />;
       case 'Consejo de Carrera':
         return <Consejo />;
-      case 'Proceso':
-        return <div>Proceso Screen Dummy Content</div>;
+      case 'Malla Curricular':
+        return <Curriculum/>;
       case 'Auxiliaturas':
         return <div>Auxiliaturas Dummy Content</div>;
       case 'Cambio de carrera':
