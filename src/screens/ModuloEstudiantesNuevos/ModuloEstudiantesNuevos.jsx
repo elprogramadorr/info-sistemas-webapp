@@ -17,6 +17,7 @@ import MapUMSS from './mapa';
 import Chat from './chat';
 import MayorPromedio from './MENExelencia';
 import Paginacion from './MENpaginacion';
+import Bienvenida from './Bienvenida';
 
 function DropdownItem({ text,mesage,content,bread,listaL }) {
     
@@ -42,7 +43,8 @@ function DropdownItem({ text,mesage,content,bread,listaL }) {
 }
 
 const EstudiantesRegulares = () => {
-    const [mesage,setMesage]=useState('Cras vehicula iaculis justo, sed varius augue tincidunt et. Proin pretium leo quis odio ullamcorper, quis blandit justo facilisis. Praesent at ex sit amet mi porttitor laoreet ut in nunc. Pellentesque id orci eu ex iaculis tempor quis id nisl. Quisque sagittis cursus mauris quis gravida. Donec tincidunt elit eget purus dignissim, in porttitor turpis laoreet. Curabitur vitae est quis leo efficitur scelerisque. Nulla vestibulum, ante id lobortis auctor, justo ex ultrices mauris, et tincidunt enim sapien luctus nibh.');
+    
+    const [mesage,setMesage]=useState(<Bienvenida></Bienvenida>);
     const [lista,setLista]=useState([{"/":"Home"},{"/estudiantes-nuevos":"Estudiantes nuevos"}])
     const ListaOriginal=[{"/":"Home"},{"/estudiantes-nuevos":"Estudiantes Nuevos"}]
     const [anchorEl1, setAnchorEl1] = React.useState(null);
