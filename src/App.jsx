@@ -10,7 +10,6 @@ import Construccion from './screens/ModuloEstRegulares/Construccion'
 import Autoridades from './screens/ModuloCarreras/Autoridades'
 import './index.css';
 import ModuloCarrreras from './screens/ModuloCarreras/ModuloCarreras'
-import Curriculum from './screens/ModuloCarreras/Curriculum'
 import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos'
 
 function App() {
