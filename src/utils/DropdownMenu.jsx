@@ -54,12 +54,14 @@ function DropdownMenu({ label, children, defaultOpen}) {
         {label}
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </button>
-      {isOpen && (
+      {isOpen && children!==undefined && (
         <div style={styles.dropdownContent}>
           {children}
         </div>
       )}
+      
     </div>
+    
   );
 }
 

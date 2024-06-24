@@ -18,6 +18,7 @@ function App() {
       <Route path="/graduados" element={<Layout><Construccion/></Layout>} />
       <Route path="/docentes" element={<Layout><Construccion/></Layout>} />
       <Route path="/ext-inv" element={<Layout><Construccion/></Layout>} />
+      <Route path="/estudiantes-nuevos" element={<Layout><EstudiantesNuevos/></Layout>} />
 
     </Routes>
     </BrowserRouter>

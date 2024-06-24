@@ -137,6 +137,60 @@ export default function Header() {
           )}
         </Toolbar>
       </AppBar>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        textColor="secondary"
+        indicatorColor="secondary"
+        aria-label="secondary tabs example"
+        sx={{
+          '& .MuiTabs-flexContainer': {
+            display: 'flex',
+            flexDirection: isMobile? 'column':'row',
+            justifyContent: isMobile? 'center':'space-between',
+            alignItems: 'center',
+            backgroundColor: '#FF000040',
+
+          }
+        }}
+      >
+        <div style={styles.logo}>
+          <a href='/' style={styles.enlace}>Departamento de <br />Informática y Sistemas</a>
+        </div>
+        <div style={styles.tabs}>
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="one" label="Carrera"
+            sx={styles.tab}
+          />
+          <Tab
+            component={Link}
+            to="/estudiantes-nuevos"
+            value="two" label="Estudiantes Nuevos"
+            sx={styles.tab} />
+          <Tab
+            component={Link}
+            to="/estudiantes-regulares"
+            value="three" label="Estudiantes Regulares"
+            sx={styles.tab} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="four" label="Docentes"
+            sx={styles.tab} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="five" label="Graduados"
+            sx={styles.tab} />
+          <Tab
+            component={Link}
+            to="/carrera"
+            value="six" label="Ext-Invest"
+            sx={styles.tab} />
+        </div>
+      </Tabs>
     </Box>
   );
 }
