@@ -7,7 +7,10 @@ import EstudiantesRegulares from './screens/ModuloEstRegulares/ModuloEstudiantes
 import Home from './screens/Home'
 import Layout from './screens/Layout'
 import Construccion from './screens/ModuloEstRegulares/Construccion'
-import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos/ModuloEstudiantesNuevos'
+import Autoridades from './screens/ModuloCarreras/Autoridades'
+import './index.css';
+import ModuloCarrreras from './screens/ModuloCarreras/ModuloCarreras'
+import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos'
 
 function App() {
   return (
@@ -16,11 +19,11 @@ function App() {
       <Route path="/" element={
         <Layout><Home/></Layout> }/>
       <Route path="/estudiantes-regulares" element={<Layout><EstudiantesRegulares/></Layout>} />
+      <Route path="/carrera" element={<Layout><ModuloCarrreras/></Layout>} />
       <Route path="/graduados" element={<Layout><Construccion/></Layout>} />
       <Route path="/docentes" element={<Layout><Construccion/></Layout>} />
       <Route path="/ext-inv" element={<Layout><Construccion/></Layout>} />
       <Route path="/estudiantes-nuevos" element={<Layout><EstudiantesNuevos/></Layout>} />
-
     </Routes>
     </BrowserRouter>
   )
