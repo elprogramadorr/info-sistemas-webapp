@@ -7,6 +7,7 @@ import EstudiantesRegulares from './screens/ModuloEstRegulares/ModuloEstudiantes
 import Home from './screens/Home'
 import Layout from './screens/Layout'
 import Construccion from './screens/ModuloEstRegulares/Construccion'
+import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos/ModuloEstudiantesNuevos'
 
 import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos'
 
@@ -21,6 +22,7 @@ function App() {
       <Route path="/docentes" element={<Layout><Construccion/></Layout>} />
       <Route path="/ext-inv" element={<Layout><Construccion/></Layout>} />
       <Route path="/estudiantes-nuevos" element={<Layout><EstudiantesNuevos/></Layout>} />
+
     </Routes>
     </BrowserRouter>
   )
