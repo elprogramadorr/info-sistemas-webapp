@@ -9,6 +9,8 @@ import Layout from './screens/Layout'
 import Construccion from './screens/ModuloEstRegulares/Construccion'
 import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos/ModuloEstudiantesNuevos'
 
+import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos'
+
 function App() {
   return (
     <BrowserRouter>
