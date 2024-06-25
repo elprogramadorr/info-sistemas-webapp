@@ -12,17 +12,17 @@ const autoridades = [
     image: autoridad1,
     name: 'Lic. Boris Materco Calancha Navia',
     position: 'Director de Carrera de Ingeniería Informática',
-    officeNumber: '123-456-7890',
-    cellNumber: '098-765-4321',
-    email: 'juan.perez@example.com'
+    officeNumber: '(4) 4233719',
+    cellNumber: '(+591) 67454555',
+    email: 'boris@fcyt.umss.edu.bo'
   },
   {
     image: autoridad2,
     name: 'Lic. Henrry Frank Villarroel Tapia',
     position: 'Jefe del Departamento de Informática y Sistemas',
-    officeNumber: '123-456-7891',
-    cellNumber: '098-765-4322',
-    email: 'ana.garcia@example.com'
+    officeNumber: '(4) 4233719',
+    cellNumber: '(+591) 67683111',
+    email: 'henrryvillarroel.t@fcyt.umss.edu.bo'
   },
   {
     image: autoridad3,
@@ -44,18 +44,21 @@ const autoridades = [
 
 const Autoridades = () => {
   return (
-    <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-      {autoridades.map((autoridad, index) => (
-        <AuthorityCard
-          key={index}
-          image={autoridad.image}
-          name={autoridad.name}
-          position={autoridad.position}
-          officeNumber={autoridad.officeNumber}
-          cellNumber={autoridad.cellNumber}
-          email={autoridad.email}
-        />
-      ))}
+    <div className='flex flex-col items-center'>
+      <h2 className='text-algin text-5xl text-rose-50 font-bold'>Autoridades de la Carrera de Ingeriería Informática</h2>
+      <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        {autoridades.map((autoridad, index) => (
+          <AuthorityCard
+            key={index}
+            image={autoridad.image}
+            name={autoridad.name}
+            position={autoridad.position}
+            officeNumber={autoridad.officeNumber}
+            cellNumber={autoridad.cellNumber}
+            email={autoridad.email}
+          />
+        ))}
+      </div>
     </div>
   );
 };

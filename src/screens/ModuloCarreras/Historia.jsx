@@ -3,8 +3,8 @@ import FCYT from '../../assets/fcyt.jpg'; // Importa tu imagen de la FCYT
 
 const Historia = () => {
     return (
-        <div className="min-h-screen py-12">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden my-20">
                 {/* Imagen grande a la izquierda */}
                 <div className="md:w-1/2 h-80 md:h-auto">
                     <img src={FCYT} alt="Historia Imagen" className="w-full h-full object-cover object-center" />

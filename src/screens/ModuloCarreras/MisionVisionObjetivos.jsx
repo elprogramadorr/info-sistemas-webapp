@@ -36,7 +36,7 @@ const MisionVisionObjetivos = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Bloque de Misión */}
                     <div className="bg-transparent border border-white rounded-lg shadow-md p-6">
-                        <h2 className="text-3xl font-bold mb-4 text-white text-center">Misión</h2>
+                        <h2 className="text-3xl font-bold mb-4 text-white text-center text-rose-300">Misión</h2>
                         <p className="text-white leading-relaxed text-center">
                             Formar profesionales competitivos en el área de informática, con principios éticos, conciencia social; que lideren soluciones tecnológicas, promoviendo el desarrollo y la innovación, con capacidad de generar conocimiento científico y tecnológico para atender las demandas locales y globales.
                         </p>
@@ -44,7 +44,7 @@ const MisionVisionObjetivos = () => {
 
                     {/* Bloque de Visión */}
                     <div className="bg-transparent border border-white rounded-lg shadow-md p-6">
-                        <h2 className="text-3xl font-bold mb-4 text-white text-center">Visión</h2>
+                        <h2 className="text-3xl font-bold mb-4 text-white text-center text-rose-300">Visión</h2>
                         <p className="text-white leading-relaxed text-center">
                             Ser un referente académico de excelencia a nivel nacional e internacional en el área de informática, con espíritu innovador, liderazgo y compromiso social.
                         </p>
@@ -52,8 +52,8 @@ const MisionVisionObjetivos = () => {
                 </div>
 
                 {/* Bloque de Objetivos */}
-                <div className="mt-12 bg-transparent border border-white shadow-md rounded-lg p-6 max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-4 text-white text-center">Objetivos</h2>
+                <div className="mt-12 bg-transparent border border-white shadow-md rounded-lg p-6 max-w-4xl mx-auto bg-sky-900">
+                    <h2 className="text-3xl font-bold mb-4 text-white text-center text-rose-300">Objetivos</h2>
                     <ul className="space-y-4">
                         {objetivos.map(objetivo => (
                             <li key={objetivo.id} className="mb-4 flex items-start list-disc">

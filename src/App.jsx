@@ -11,7 +11,6 @@ import Autoridades from './screens/ModuloCarreras/Autoridades'
 import './index.css';
 import ModuloCarrreras from './screens/ModuloCarreras/ModuloCarreras'
 import EstudiantesNuevos from './screens/ModuloEstudiantesNuevos'
-import LineasDeEstudio from './screens/ModuloCarreras/LineasDeEstudio'
 
 function App() {
   return (

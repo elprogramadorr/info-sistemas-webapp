@@ -8,9 +8,9 @@ const Consejo = () => {
       category: 'Director de Carrera',
       members: [
         {
-          name: 'Luis González',
-          phone: '+123456789',
-          email: 'luis.gonzalez@example.com',
+          name: 'Lic. Boris Materco Calancha Navia',
+          phone: '(4) 4233719',
+          email: 'boris@fcyt.umss.edu.bo',
         },
       ],
     },
@@ -59,11 +59,11 @@ const Consejo = () => {
 
   return (
     <div className="container mx-auto mt-8">
-      <h1 className="text-5xl font-bold text-center mb-8">Consejo de Carrera</h1>
+      <h1 className="text-5xl font-bold text-center mb-8 text-white">Consejo de Carrera</h1>
 
       {councilMembers.map((category, index) => (
         <div key={index} className="mb-8">
-          <h2 className="text-3xl font-bold mb-4">{category.category}</h2>
+          <h2 className="text-3xl font-bold mb-4 text-rose-300">{category.category}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {category.members.map((member, idx) => (
               <div key={idx} className="bg-white rounded-lg shadow-lg p-6">

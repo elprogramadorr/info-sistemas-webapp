@@ -1,14 +1,17 @@
 import React from 'react';
 import Header from '../utils/Header';
+import Footer from '../utils/Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      {children}
-      
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
     </div>
   );
-}
+};
 
 export default Layout;

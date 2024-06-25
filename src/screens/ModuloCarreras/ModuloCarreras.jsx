@@ -125,7 +125,8 @@ const ModuloCarreras = () => {
       case 'Historia':
         return <Historia/>;
       default:
-        return <div>Construcción Dummy Content</div>;
+        handleItemClick('Historia');
+        return <Historia />;
     }
   };
 

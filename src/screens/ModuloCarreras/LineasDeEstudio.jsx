@@ -73,7 +73,7 @@ const LineasDeEstudio = () => {
 
     return (
         <div className="container mx-auto mt-8">
-            <h1 className="text-5xl font-bold text-center mb-8">Líneas de Estudio</h1>
+            <h1 className="text-5xl font-bold text-center mb-8 text-white">Líneas de Estudio</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                 {lineasDeEstudio.map((linea) => (
                     <div key={linea.id} className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center cursor-pointer col-span-2 md:col-auto"
