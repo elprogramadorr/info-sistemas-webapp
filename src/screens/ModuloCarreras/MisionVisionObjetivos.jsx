@@ -2,7 +2,6 @@ import React from 'react';
 import { FaCircle } from 'react-icons/fa';
 
 const MisionVisionObjetivos = () => {
-
     // Array de objetivos
     const objetivos = [
         {
@@ -32,33 +31,34 @@ const MisionVisionObjetivos = () => {
     ];
 
     return (
-        <div className="min-h-screen py-12 bg-gray-100 font-serif">
+        <div className="min-h-screen py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Bloque de Misión */}
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                        <h2 className="text-3xl font-bold mb-4 text-gray-900 text-center">Misión</h2>
-                        <p className="text-gray-700 leading-relaxed text-center">
+                    <div className="bg-transparent border border-white rounded-lg shadow-md p-6">
+                        <h2 className="text-3xl font-bold mb-4 text-white text-center">Misión</h2>
+                        <p className="text-white leading-relaxed text-center">
                             Formar profesionales competitivos en el área de informática, con principios éticos, conciencia social; que lideren soluciones tecnológicas, promoviendo el desarrollo y la innovación, con capacidad de generar conocimiento científico y tecnológico para atender las demandas locales y globales.
                         </p>
                     </div>
 
                     {/* Bloque de Visión */}
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                        <h2 className="text-3xl font-bold mb-4 text-gray-900 text-center">Visión</h2>
-                        <p className="text-gray-700 leading-relaxed text-center">
+                    <div className="bg-transparent border border-white rounded-lg shadow-md p-6">
+                        <h2 className="text-3xl font-bold mb-4 text-white text-center">Visión</h2>
+                        <p className="text-white leading-relaxed text-center">
                             Ser un referente académico de excelencia a nivel nacional e internacional en el área de informática, con espíritu innovador, liderazgo y compromiso social.
                         </p>
                     </div>
                 </div>
 
                 {/* Bloque de Objetivos */}
-                <div className="mt-12">
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900 text-center">Objetivos</h2>
-                    <ul className="max-w-3xl mx-auto">
+                <div className="mt-12 bg-transparent border border-white shadow-md rounded-lg p-6 max-w-4xl mx-auto">
+                    <h2 className="text-3xl font-bold mb-4 text-white text-center">Objetivos</h2>
+                    <ul className="space-y-4">
                         {objetivos.map(objetivo => (
-                            <li key={objetivo.id} className="mb-4 flex items-start">
-                                <p className="text-gray-700 leading-relaxed">
+                            <li key={objetivo.id} className="mb-4 flex items-start list-disc">
+                                <FaCircle className="text-white mr-3 mt-1" size={12} />
+                                <p className="text-white leading-relaxed">
                                     {objetivo.texto}
                                 </p>
                             </li>
