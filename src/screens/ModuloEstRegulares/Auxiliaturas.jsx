@@ -129,7 +129,7 @@ const Auxiliaturas = () => {
 				</div>
 			</div>
 			<div style={styles.contenido}>
-				<div className="info" style={{ width: '50%', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+				<div className="info" style={{ width: '30%', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
 					<fieldset>
 						<legend>Invitación</legend>
 						<p>El proceso de auxiliatura se realiza mediante una competencia de méritos y evaluación de capacidades
@@ -152,7 +152,7 @@ const Auxiliaturas = () => {
 
 					</fieldset>
 				</div>
-				<div className="interactivo" style={{ width: '50%' }}>
+				<div className="interactivo" style={{ width: '70%' }}>
 					<fieldset >
 						<legend>Proceso de Auxiliatura</legend>
 						<Timeline />
