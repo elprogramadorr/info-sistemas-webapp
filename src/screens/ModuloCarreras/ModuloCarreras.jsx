@@ -11,6 +11,7 @@ import MercadoDeTrabajo from './MercadoDeTrabajo';
 import LineasDeEstudio from './LineasDeEstudio';
 import MisionVisionObjetivos from './MisionVisionObjetivos';
 import Historia from './Historia';
+import MigaDePan from "../../utils/MigaDePan";
 
 function DropdownItem({ text, isSelected, onClick }) {
   const styles = {
@@ -154,6 +155,7 @@ const ModuloCarreras = () => {
           </div>
         </div>
         <div style={{ flex: '1', display: 'flex', flexDirection: 'column', fontFamily: 'Nunito Sans' }}>
+          <MigaDePan/>
           {renderContent()}
         </div>
       </div>

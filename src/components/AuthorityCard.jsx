@@ -9,8 +9,10 @@ const AuthorityCard = ({ image, name, position, officeNumber, cellNumber, email 
       </div>
       <div className="w-2/3 p-4 flex flex-col justify-between">
         <div className="flex flex-col space-y-4">
-            <h1 className="text-2xl font-bold truncate text-gray-900">{name}</h1>
-            <p className="text-lg text-gray-600">{position}</p>
+            <div>
+              <h1 className="text-2xl font-bold truncate text-gray-900">{name}</h1>
+              <p className="text-lg text-gray-600">{position}</p>
+            </div>
             <p className="text-lg text-gray-600">{officeNumber}</p>
             <p className="text-lg text-gray-600">{cellNumber}</p>
             <p className="text-lg text-gray-600">{email}</p>

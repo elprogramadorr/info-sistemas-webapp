@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import { FaInfoCircle } from 'react-icons/fa';
-import imagenIA from '../../assets/autoridades/autoridad1.jpg'; // Importa tu imagen de Inteligencia Artificial
-
+import IconIA from '../../assets/Lineas/IA.png';
+import IS from '../../assets/Lineas/IS.jpg'; // Importar la imagen IS
+import DB from '../../assets/Lineas/DB.jpg'; // Importar la imagen DB
+import CS from '../../assets/Lineas/CS.png'; // Importar la imagen CS
+import NET from '../../assets/Lineas/NET.jpg'; // Importar la imagen NET
+// Estilos personalizados para el modal
 const customStyles = {
     content: {
         top: '50%',
@@ -11,114 +14,100 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        maxWidth: '80%',
+        width: '70%', // Ancho del modal
+        maxWidth: '800px', // Máximo ancho del modal
         maxHeight: '80%',
         overflow: 'auto',
         padding: '20px',
+        border: 'none', // Para eliminar el borde del modal
+        borderRadius: '8px', // Borde redondeado
+        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' // Sombra ligera
     },
     overlay: {
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    },
+        backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    }
 };
 
 const LineasDeEstudio = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedLinea, setSelectedLinea] = useState(null);
 
+    // Datos de las líneas de estudio, incluyendo materias específicas y la imagen correspondiente
+    const lineasDeEstudio = [
+        { 
+            id: 1,
+            nombre: 'Inteligencia Artificial',
+            imagen: IconIA, // Usar la imagen de IconIA
+            materias: [
+                'Álgebra I',
+                'Álgebra II',
+                'Lógica',
+                'Programación Funcional',
+                'Inteligencia Artificial I',
+                'Inteligencia Artificial II',
+                'Interacción Humano Computador'
+            ]
+        },
+        { 
+            id: 2, 
+            nombre: 'Redes y SW de base', 
+            imagen: NET, // Usar la imagen de IS
+            materias: ['Cálculo I', 'Cálculo II', 'Cálculo Numérico', 'Probabilidad Estadística', 'Taller de Sistemas Operativos', 'Redes de Computadoras', 'Tecnología de Redes Avanzadas'] 
+        },
+        { id: 3, nombre: 'Teoría de la Computación', imagen: CS, materias: ['Física General', 'Arquitectura de Computadoras I', 'Arquitectura de Computadoras II', 'Taller de Programación a Bajo Nivel', 'Teoría de Autómatas y Lenguajes Formales', 'Estructura y Semántica de Lenguajes de Programción'] },
+        { id: 4, nombre: 'Base de Datos', imagen: DB, materias: ['Ingles I', 'Ingles II', 'Organización y Métodos', 'Base de Datos I', 'Base de Datos II', 'Taller de Base de Datos'] },
+        { id: 5, nombre: 'Desarrollo e Ing. de Software', imagen: IS, materias: ['Programación', 'Graficación por Computadora','Sistemas de Información I', 'Sistemas de Información II', 'Programación Web', 'Arquitectura de Software', 'Taller de Ingeniería de Software'] },
+    ];
+
+    // Función para abrir el modal y mostrar la información de la línea seleccionada
     const openModal = (linea) => {
         setSelectedLinea(linea);
         setModalIsOpen(true);
     };
 
+    // Función para cerrar el modal
     const closeModal = () => {
         setSelectedLinea(null);
         setModalIsOpen(false);
     };
 
-    const lineasDeEstudio = [
-        {
-            titulo: 'Inteligencia Artificial',
-            descripcion:
-                'Estudio de técnicas que permiten a las máquinas aprender y realizar tareas que requieren inteligencia humana.',
-            imagen: imagenIA,
-        },
-        {
-            titulo: 'Redes y SW de Base',
-            descripcion:
-                'Diseño y administración de sistemas de red, protocolos de comunicación y software de infraestructura.',
-            imagen: imagenIA,
-        },
-        {
-            titulo: 'Teoría de la Computación',
-            descripcion:
-                'Estudio de modelos abstractos y fundamentales que subyacen a la computación y sus límites teóricos.',
-            imagen: imagenIA,
-        },
-        {
-            titulo: 'Base de Datos',
-            descripcion:
-                'Diseño, implementación y gestión de sistemas de almacenamiento y recuperación de datos.',
-            imagen: imagenIA,
-        },
-        {
-            titulo: 'Desarrollo e Ing. de Software',
-            descripcion:
-                'Proceso de creación y mantenimiento de software de calidad, aplicando metodologías y buenas prácticas.',
-            imagen: imagenIA,
-        },
-    ];
-
     return (
-        <div className="min-h-screen py-12 bg-gray-100">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="text-4xl font-bold text-center mb-8">Líneas de Estudio</h1>
-
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-                    {lineasDeEstudio.map((linea, index) => (
-                        <div
-                            key={index}
-                            className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer"
-                            onClick={() => openModal(linea)}
-                        >
-                            <div className="px-4 py-2 flex justify-between items-center bg-indigo-500">
-                                <h2 className="text-xl font-bold text-white">{linea.titulo}</h2>
-                            </div>
-                            <div className="p-4">
-                                <p className="text-gray-700 leading-relaxed">{linea.descripcion}</p>
-                            </div>
-                            <div className="relative">
-                                <img src={linea.imagen} alt={linea.titulo} className="w-full h-auto" />
-                                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 hover:opacity-50 transition-opacity">
-                                    <div className="flex items-center justify-center h-full">
-                                        <FaInfoCircle className="text-white h-8 w-8" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <Modal
-                    isOpen={modalIsOpen}
-                    onRequestClose={closeModal}
-                    style={customStyles}
-                    contentLabel="Información Adicional"
-                >
-                    <div>
-                        <h2 className="text-2xl font-bold mb-4">{selectedLinea?.titulo}</h2>
-                        <div className="mb-4">
-                            <img src={selectedLinea?.imagen} alt={selectedLinea?.titulo} className="w-full h-auto rounded-lg" />
-                        </div>
-                        <p className="text-gray-700 leading-relaxed">{selectedLinea?.descripcion}</p>
+        <div className="container mx-auto mt-8">
+            <h1 className="text-5xl font-bold text-center mb-8">Líneas de Estudio</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                {lineasDeEstudio.map((linea) => (
+                    <div key={linea.id} className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center cursor-pointer col-span-2 md:col-auto"
+                         onClick={() => openModal(linea)}>
+                        <img src={linea.imagen} alt={`Icono de ${linea.nombre}`} className="w-24 h-24" />
+                        <h2 className="text-2xl font-bold mt-4 text-center text-black">{linea.nombre}</h2>
                     </div>
+                ))}
+            </div>
+
+            {/* Modal para mostrar información adicional */}
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Información de Línea de Estudio"
+            >
+                <div className="">
+                    <h2 className="text-4xl font-bold mb-4 text-black text-center">{selectedLinea?.nombre}</h2>
+                    
+                    <img src={selectedLinea?.imagen} alt={`Icono de ${selectedLinea?.nombre}`} className="w-24 h-24 mx-auto mt-4" />
+                    <ul className="list-disc list-inside text-lg text-gray-700">
+                        {selectedLinea?.materias.map((materia, index) => (
+                            <li key={index}>{materia}</li>
+                        ))}
+                    </ul>
                     <button
                         onClick={closeModal}
-                        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mt-4"
+                        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mt-4 text-center w-full"
                     >
                         Cerrar
                     </button>
-                </Modal>
-            </div>
+                </div>
+            </Modal>
         </div>
     );
 };

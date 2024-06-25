@@ -3,9 +3,9 @@ import AuthorityCard from '../../components/AuthorityCard';
 
 // Importa las imágenes locales
 import autoridad1 from '../../assets/autoridades/autoridad1.jpg';
-import autoridad2 from '../../assets/autoridades/autoridad1.jpg';
-import autoridad3 from '../../assets/autoridades/autoridad1.jpg';
-import autoridad4 from '../../assets/autoridades/autoridad1.jpg';
+import autoridad2 from '../../assets/autoridades/autoridad3.jpg';
+import autoridad3 from '../../assets/autoridades/autoridad2.jpg';
+import autoridad4 from '../../assets/autoridades/autoridad4.jpg';
 
 const autoridades = [
   {
